@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.util.ArrayList;
+import java.util.List;
 
 class Main {
   public static void main(String[] args) {
@@ -20,14 +22,17 @@ class Main {
 				System.out.println("Enter true if the horse is tame or false if it is not.");
 				boolean t = scanner.nextBoolean();
 				h = new Horse(hn, w, t);
-				s.arrayList.add(h);
+        s.Horses.add(h); 
 			}//testing goodest 4
 			else{
 				break;
 			}
 		}while(true);
 		//Display the info here
-                //You code here!
+        	    for(int i = 0; i < s.Horses.size(); i++) {   
+              System.out.print("Horse #" + (i+1) + " Name: "  + s.Horses.get(i).getName() + " Weight: " + s.Horses.get(i).getDouble() + " Tame: " + s.Horses.get(i).getValid() + "\n");
+              }
+          
+	      // Horse #1 Name: JoJo Weight: 1300.0 Tame: false
 	  }
-  }
 }
